@@ -1,0 +1,14 @@
+﻿Dear @Model.Title @Model.FamilyName
+    
+Thanks for your purchases of:
+    
+@foreach(var item in Model.PurchasedItems)
+{
+    @item.Quantity<text> of </text>@item.Product<text> at </text>@item.Price
+}
+    
+Thank you again!
+
+Email sent at @DateTime.Now
+
+Plaintext version

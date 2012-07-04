@@ -1,0 +1,22 @@
+﻿@model DNDN_ActionMailer.MVC3.Models.EmailModel
+@{
+    Layout = null;
+}
+<html>
+<body>
+    <p>Dear @Model.Title @Model.FamilyName</p>
+    
+    <p>Thanks for your purchases of:</p>
+    
+    <ul>
+        @foreach(var item in Model.PurchasedItems)
+        {
+            <li>@item.Quantity of @item.Product at @item.Price</li>
+        }
+    </ul>
+    
+    <p>Thank you again!</p>
+    
+    <p>Email sent at @DateTime.Now</p>
+</body>
+</html>
